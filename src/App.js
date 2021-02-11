@@ -1,7 +1,7 @@
 import Home from "./pages/Home";
 import Lafdya from "./pages/Lafdya";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Quiz from "./pages/Quiz";
+import QuizPage from "./pages/Quiz/QuizPage";
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
             <Lafdya />
           </Route>
           <Route exact path="/Quiz">
-            <Quiz />
+            <QuizPage />
           </Route>
         </Switch>
       </Router>

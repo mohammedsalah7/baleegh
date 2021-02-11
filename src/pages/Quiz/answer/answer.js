@@ -14,7 +14,7 @@ const Answer = (props) => {
       onClick={() => props.checkAnswer(qAnswer)}
       key={qAnswer}
     >
-      {props.answer[qAnswer]}
+      <span>{props.answer[qAnswer]}</span>
     </li>
   ));
 
@@ -25,9 +25,9 @@ const Answer = (props) => {
       </ul>
       <div>
         {props.correctAnswer
-          ? "Correct Answer!"
+          ? "اجابة صحيحة "
           : props.clickedAnswer
-          ? "Incorrect Answer!"
+          ? "اجابة خاطئة"
           : ""}
       </div>
     </>

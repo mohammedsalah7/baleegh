@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="129" height="129" viewBox="0 0 129 129">
+  <g id="Duration_Left" data-name="Duration Left" transform="translate(-23.608 -23.608)">
+    <g id="Ellipse_36" data-name="Ellipse 36" transform="translate(23.608 23.608)" fill="none" stroke="#f7f7f7" stroke-linecap="round" stroke-width="12">
+      <circle cx="64.5" cy="64.5" r="64.5" stroke="none"/>
+      <circle cx="64.5" cy="64.5" r="58.5" fill="none"/>
+    </g>
+    <text id="_٢٢" data-name="٢٢" transform="translate(88.608 110.608)" fill="#ffe062" font-size="59" font-family="SegoeUI, Segoe UI" opacity="0"><tspan x="-29.558" y="0">٢٢</tspan></text>
+    <text id="_45" data-name="45" transform="translate(88.608 104.608)" fill="#ffe062" font-size="45" font-family="SegoeUI, Segoe UI"><tspan x="-24.258" y="0">45</tspan></text>
+    <g id="segmant" transform="translate(23.608 23.608)" fill="none" stroke="#ffe062" stroke-linecap="round" stroke-width="12" stroke-dasharray="100 1000">
+      <circle cx="64.5" cy="64.5" r="64.5" stroke="none"/>
+      <circle cx="64.5" cy="64.5" r="58.5" fill="none"/>
+    </g>
+  </g>
+</svg>

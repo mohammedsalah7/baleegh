@@ -1,50 +1,51 @@
 import React, { Component } from "react";
 import Question from "./question/Question";
 import Answer from "./answer/answer";
-import "./QuizMain.css";
+import "./Quiz.css";
 
 export default class Quiz extends Component {
   // initiating the local state
   state = {
     quiestions: {
-      1: 'What US city is known as the "birthplace of jazz"?',
-      2: "What is the capital of Greece?",
-      3: "What planet gave birth to Superman?",
+      1: "؟ما هي المفردة الشاذة",
+      2: "؟ماهو عكس  ذهب ",
+      3: "ماهي المفردة الشاذة",
     },
     answers: {
       1: {
-        1: "Chicago",
-        2: "New Orleans",
-        3: "New York",
+        1: "سيارة",
+        2: "بيت",
+        3: "باص",
+        4: "طائرة",
       },
       2: {
-        1: "Athens",
-        2: "Patras",
-        3: "Kalamata",
+        1: "اخذ",
+        2: "امسك",
+        3: "جاء",
+        4: "أوصل",
       },
       3: {
-        1: "Krypton",
-        2: "Mars",
-        3: "Saturn",
+        1: "خندق",
+        2: "بئر",
+        3: "حفرة",
+        4: "مبنى",
       },
     },
     correctAnswers: {
       1: "2",
-      2: "1",
-      3: "1",
+      2: "3",
+      3: "4",
     },
     correctAnswer: 0,
     clickedAnswer: 0,
     step: 1,
-    score: 0,
   };
 
   // the method that checks the correct answer
   checkAnswer = (answer) => {
-    const { correctAnswers, step, score } = this.state;
+    const { correctAnswers, step } = this.state;
     if (answer === correctAnswers[step]) {
       this.setState({
-        score: score + 1,
         correctAnswer: correctAnswers[step],
         clickedAnswer: answer,
       });
@@ -56,15 +57,6 @@ export default class Quiz extends Component {
     }
   };
 
-  // method to move to the next question
-  nextStep = (step) => {
-    this.setState({
-      step: step + 1,
-      correctAnswer: 0,
-      clickedAnswer: 0,
-    });
-  };
-
   render() {
     let {
       quiestions,
@@ -72,7 +64,6 @@ export default class Quiz extends Component {
       correctAnswer,
       clickedAnswer,
       step,
-      score,
     } = this.state;
     return (
       <div className="Content">
@@ -86,26 +77,9 @@ export default class Quiz extends Component {
               correctAnswer={correctAnswer}
               clickedAnswer={clickedAnswer}
             />
-            <button
-              className="NextStep"
-              disabled={
-                clickedAnswer && Object.keys(quiestions).length >= step
-                  ? false
-                  : true
-              }
-              onClick={() => this.nextStep(step)}
-            >
-              Next
-            </button>
           </>
         ) : (
-          <div className="finalPage">
-            <h1>You have completed the quiz!</h1>
-            <p>
-              Your score is: {score} of {Object.keys(quiestions).length}
-            </p>
-            <p>Thank you!</p>
-          </div>
+          ""
         )}
       </div>
     );

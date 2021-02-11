@@ -2,30 +2,44 @@
     list-style: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    direction: rtl;
+
 }
 .Answers li{
+    width:350px ;
+    height: 111px;
     padding: 10px;
-    border-left: 4px solid #FF3B3B;
-    background-color: #bbb;
-    margin: 0 0 5px;
+    background-color: #FFF8DB;
+    margin-bottom: 25px;
+    margin-right: 12px;
+    margin-left: 80px;
+    text-align: center;
+    border-radius: 6px;
+}
+.Answers li span{
+    display: flex;
+    margin-top: 35px;
+    margin-right: 150px;
+    font-size: 33px;
+    color:#193051;
 }
 .Answers li:hover{
     cursor: pointer;
-    background-color: #a2a2a2;
+    background-color: #DBE6FF;
+    border: 1px solid #5B87EB;
+
 }
 .Answers .correct,
 .Answers .correct:hover {
-    background-color: #1db900;
-    border-left: 4px solid #0f6300;
-    color: #fff;
+    background-color: #DAFDEE;
+    border: 1px solid #7AD1BE;
+    color:#193051;
 }
 .Answers .incorrect,
 .Answers .incorrect:hover {
-    background-color: #ec0000;
-    border-left: 4px solid #FF3B3B;
+    background-color:#FFD5E8;
+    border: 1px solid #F669A9;
     color: #fff;
-}
-.Answers[disabled] {
-    pointer-events: none;
-    opacity: 0.7;
 }
